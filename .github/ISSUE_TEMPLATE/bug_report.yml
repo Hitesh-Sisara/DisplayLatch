@@ -1,0 +1,37 @@
+name: Bug report
+description: A monitor isn't detected, brightness doesn't change, or something else is wrong
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and macOS version
+      placeholder: MacBook Pro M3 Max, macOS 26.1
+    validations:
+      required: true
+  - type: textarea
+    id: monitors
+    attributes:
+      label: Monitors and how they're connected
+      placeholder: "Dell U2723QE over USB-C; Samsung S22A33x over HDMI (built-in port)"
+    validations:
+      required: true
+  - type: textarea
+    id: list
+    attributes:
+      label: Output of the CLI
+      description: Run the app's `list` command (see README) and paste the output. You can mask serial numbers.
+      render: text
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: The last lines of ~/Library/Logs/<app>.log (menu › Open Log).
+      render: text

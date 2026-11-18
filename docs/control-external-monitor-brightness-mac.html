@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Control external monitor brightness on Mac (DDC, free app)</title>
+<meta name="description" content="Change external monitor brightness on Mac over DDC/CI from the menu bar or Terminal. One slider for all displays. Free, open source, Apple silicon.">
+<link rel="canonical" href="https://hitesh-sisara.github.io/DisplayLatch/control-external-monitor-brightness-mac.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Control external monitor brightness on Mac (DDC, free app)">
+<meta property="og:description" content="Change external monitor brightness on Mac over DDC/CI from the menu bar or Terminal. One slider for all displays. Free, open source, Apple silicon.">
+<meta property="og:url" content="https://hitesh-sisara.github.io/DisplayLatch/control-external-monitor-brightness-mac.html">
+<meta property="og:image" content="https://hitesh-sisara.github.io/DisplayLatch/images/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/icon-256.png">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "DisplayLatch", "operatingSystem": "macOS 14 or later (Apple silicon)", "applicationCategory": "UtilitiesApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "license": "https://opensource.org/licenses/MIT", "downloadUrl": "https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest", "url": "https://hitesh-sisara.github.io/DisplayLatch/", "codeRepository": "https://github.com/Hitesh-Sisara/DisplayLatch", "image": "https://hitesh-sisara.github.io/DisplayLatch/images/social-preview.png", "description": "Free, open-source macOS menu-bar app that keeps external monitors connected, fixes monitors that stay black after sleep, controls DDC brightness and disconnects displays without unplugging."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I adjust the brightness of a second monitor on Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Use a DDC app such as DisplayLatch. It controls the monitor's hardware brightness from the menu bar, with a slider per monitor or one slider for all displays."}}, {"@type": "Question", "name": "Does DisplayLatch dim the screen with an overlay?", "acceptedAnswer": {"@type": "Answer", "text": "No. It uses DDC/CI to change the monitor's own backlight, the same setting the monitor's buttons change."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="brand" href="./"><img src="images/icon-256.png" alt="" width="28" height="28">DisplayLatch</a>
+<nav><a href="fix-external-monitor-not-detected-after-sleep-mac.html">Monitor black after sleep</a><a href="disconnect-display-mac-without-unplugging.html">Disconnect a display</a><a href="control-external-monitor-brightness-mac.html">External monitor brightness</a><a href="free-betterdisplay-alternative.html">BetterDisplay alternative</a><a class="gh" href="https://github.com/Hitesh-Sisara/DisplayLatch">GitHub</a></nav></header>
+<main>
+<article>
+<h1>Control external monitor brightness on a Mac</h1>
+<p class="lead">macOS changes brightness only on Apple displays. For most other monitors you have to use the buttons on the monitor. DisplayLatch lets you change it from the menu bar instead, and it changes the monitor's real backlight.</p>
+<h2>How it works: DDC/CI</h2>
+<p>Most monitors support <b>DDC/CI</b>, a standard way for a computer to change the monitor's settings over the same cable that carries the picture. DisplayLatch sends the standard brightness command (VCP code 0x10), so the monitor really gets dimmer. That's different from a software overlay, which only darkens the image.</p>
+<h2>Steps</h2>
+<ol>
+<li>Install <a href="./">DisplayLatch</a> and click its menu-bar icon.</li>
+<li>Drag a monitor's <b>Brightness</b> slider, or use <b>All displays</b> to change every monitor at once.</li>
+<li>From Terminal: <code>displaylatch brightness all 40</code> or <code>displaylatch brightness &lt;serial&gt; 70</code>.</li>
+</ol>
+<h2>Brightness doesn't change?</h2>
+<ul>
+<li>Turn on <b>DDC/CI</b> in the monitor's own on-screen menu. Some monitors turn it off by default.</li>
+<li>Some docks, KVM switches and adapters don't pass DDC through. Test with a direct cable.</li>
+<li>TVs and some portable monitors don't support DDC at all.</li>
+</ul>
+</article><section><h2>Frequently asked questions</h2><h3>How do I adjust the brightness of a second monitor on Mac?</h3><p>Use a DDC app such as DisplayLatch. It controls the monitor&#x27;s hardware brightness from the menu bar, with a slider per monitor or one slider for all displays.</p><h3>Does DisplayLatch dim the screen with an overlay?</h3><p>No. It uses DDC/CI to change the monitor&#x27;s own backlight, the same setting the monitor&#x27;s buttons change.</p></section>
+<section class="cta"><h2>Get DisplayLatch, free</h2>
+<p>Native macOS menu-bar app, about 1.5 MB, open source (MIT). Apple silicon, macOS 14+.</p>
+<p><a class="button" href="https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest">Download the latest release</a> <a class="button ghost" href="https://github.com/Hitesh-Sisara/DisplayLatch">View source on GitHub</a></p></section>
+</main>
+<footer><p>DisplayLatch is free and open source under the MIT license. BetterDisplay is a trademark of its owner; DisplayLatch is an independent project, not affiliated with or endorsed by BetterDisplay, MonitorControl or Apple.</p></footer>
+</body>
+</html>

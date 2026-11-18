@@ -1,0 +1,31 @@
+name: Release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Select latest Xcode
+        run: sudo xcode-select -s "$(ls -d /Applications/Xcode*.app | sort -V | tail -1)"
+      - name: Test
+        run: swift test
+      - name: Build app, zip and dmg
+        run: scripts/build-app.sh "${GITHUB_REF_NAME#v}"
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          source scripts/config.sh
+          V="${GITHUB_REF_NAME#v}"
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/$APP_NAME-$V.zip dist/$APP_NAME-$V.dmg dist/$APP_NAME-$V.sha256 --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/$APP_NAME-$V.zip dist/$APP_NAME-$V.dmg dist/$APP_NAME-$V.sha256 \
+              --title "$APP_NAME $V" --generate-notes
+          fi
