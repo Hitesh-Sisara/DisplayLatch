@@ -1360,6 +1360,33 @@ table.compare {
   max-width: 30em;
   margin: 14px 0 0;
 }
+.featured-on {
+  margin-top: 44px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.featured-on h2 {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+}
+.badge-row img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+.text-links {
+  margin: 14px 0 0;
+  font-size: 13px;
+}
 .foot-bottom {
   display: flex;
   justify-content: space-between;
