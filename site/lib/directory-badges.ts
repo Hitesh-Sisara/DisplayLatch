@@ -96,6 +96,8 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://prolaunch.net", img: "https://prolaunch.net/images/badges/featured-light.svg", alt: "Pro Launch Featured Badge (light theme)", width: 111 },
   { href: "https://saaspa.ge/product/cmwo5bllr002rl808bwu3ivgc", img: "https://saaspa.ge/api/embed/product/cmwo5bllr002rl808bwu3ivgc/badge.png?theme=orange", alt: "Featured on Saaspa.ge", width: 107, rel: "nofollow" },
   { href: "https://soproduct.com", img: "https://soproduct.com/badages-awards.svg", alt: "Featured on So Product", width: 109 },
+  { href: "https://dealmyapp.com/listings/displaylatch", img: "https://dealmyapp.com/badges/listed-on-dealmyapp.svg", alt: "Listed on DealMyApp", width: 160 },
+  { href: "https://debutpin.com", img: "https://debutpin.com/brand/badge-light.svg", alt: "DisplayLatch on DebutPin", width: 155 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
