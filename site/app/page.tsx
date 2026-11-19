@@ -15,7 +15,8 @@ import {
   Shield,
   Terminal,
 } from "../components/icons";
-import { GUIDES, HOME_FAQ, OG_IMAGE, SITE } from "../lib/site";
+import { latestVersion } from "../lib/release";
+import { COMPARE, GUIDES, HOME_FAQ, OG_IMAGE, SITE } from "../lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "DisplayLatch: Free External Monitor Brightness Control & Auto-Reconnect for Mac" },
@@ -64,25 +65,14 @@ const FEATURES = [
   },
 ];
 
-const COMPARE: [string, string, string, string][] = [
-  ["Price", "Free", "Free + paid Pro", "Free"],
-  ["Open source", "Yes, MIT", "No", "Yes, MIT"],
-  ["External monitor brightness (DDC)", "Yes", "Yes", "Yes"],
-  ["Auto-reconnect monitors left dark after sleep", "Yes", "Not advertised", "No"],
-  ["Disconnect a display without unplugging", "Yes", "Pro only", "No"],
-  ["Resolution switcher", "Yes", "Yes", "No"],
-  ["Command-line tool", "Yes", "Yes", "Not documented"],
-  ["Brightness keys and native OSD", "No", "Yes", "Yes"],
-  ["HiDPI scaling, virtual screens, PIP, XDR", "No", "Yes", "No"],
-];
-
 function cell(v: string) {
   if (v.startsWith("Yes")) return <span className="yes">{v}</span>;
   if (v === "No") return <span className="no">No</span>;
   return v;
 }
 
-export default function Home() {
+export default async function Home() {
+  const version = await latestVersion();
   return (
     <>
       <JsonLd
@@ -94,8 +84,7 @@ export default function Home() {
           downloadUrl: SITE.releases,
           applicationCategory: "UtilitiesApplication",
           operatingSystem: "macOS 14 or later (Apple silicon)",
-          softwareVersion: SITE.version,
-          fileSize: "1.6MB",
+          softwareVersion: version,
           license: "https://opensource.org/licenses/MIT",
           isAccessibleForFree: true,
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -132,7 +121,7 @@ export default function Home() {
         <div className="wrap hero-grid">
           <div>
             <a className="pill-new" href={SITE.releases}>
-              <b>NEW</b> Version {SITE.version} is out, free for everyone
+              <b>NEW</b> Version {version} is out, free for everyone
             </a>
             <h1 className="display hero-title">
               Control external monitor <span className="accent">brightness</span> on your Mac.
@@ -433,12 +422,12 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
-                {COMPARE.map(([f, us, bd, mc]) => (
-                  <tr key={f}>
-                    <td>{f}</td>
-                    <td className="us">{cell(us)}</td>
-                    <td>{cell(bd)}</td>
-                    <td>{cell(mc)}</td>
+                {COMPARE.map((r) => (
+                  <tr key={r.feature}>
+                    <td>{r.feature}</td>
+                    <td className="us">{cell(r.us)}</td>
+                    <td>{cell(r.betterdisplay)}</td>
+                    <td>{cell(r.monitorcontrol)}</td>
                   </tr>
                 ))}
               </tbody>

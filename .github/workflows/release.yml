@@ -23,9 +23,11 @@ jobs:
         run: |
           source scripts/config.sh
           V="${GITHUB_REF_NAME#v}"
+          # Unversioned copy so /releases/latest/download/DisplayLatch.dmg always serves the newest build (the website links to it).
+          cp "dist/$APP_NAME-$V.dmg" "dist/$APP_NAME.dmg"
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            gh release upload "$GITHUB_REF_NAME" dist/$APP_NAME-$V.zip dist/$APP_NAME-$V.dmg dist/$APP_NAME-$V.sha256 --clobber
+            gh release upload "$GITHUB_REF_NAME" dist/$APP_NAME-$V.zip dist/$APP_NAME-$V.dmg dist/$APP_NAME-$V.sha256 dist/$APP_NAME.dmg --clobber
           else
-            gh release create "$GITHUB_REF_NAME" dist/$APP_NAME-$V.zip dist/$APP_NAME-$V.dmg dist/$APP_NAME-$V.sha256 \
+            gh release create "$GITHUB_REF_NAME" dist/$APP_NAME-$V.zip dist/$APP_NAME-$V.dmg dist/$APP_NAME-$V.sha256 dist/$APP_NAME.dmg \
               --title "$APP_NAME $V" --generate-notes
           fi

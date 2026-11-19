@@ -6,7 +6,31 @@ on:
 permissions:
   contents: read
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      app: ${{ steps.filter.outputs.app }}
+      site: ${{ steps.filter.outputs.site }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            app:
+              - 'Sources/**'
+              - 'Tests/**'
+              - 'Package.swift'
+              - 'Resources/**'
+              - 'scripts/**'
+              - '.github/workflows/**'
+            site:
+              - 'site/**'
+              - '.github/workflows/**'
+
   build-test:
+    needs: changes
+    if: needs.changes.outputs.app == 'true'
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
@@ -17,3 +41,30 @@ jobs:
         run: swift test
       - name: Package
         run: scripts/build-app.sh 0.0.0-ci
+
+  site:
+    needs: changes
+    if: needs.changes.outputs.site == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npx tsc --noEmit
+      - name: Check the export
+        run: |
+          for f in index.html 404.html sitemap.xml robots.txt og.png fonts/OFL.txt \
+                   control-external-monitor-brightness-mac/index.html \
+                   fix-external-monitor-not-detected-after-sleep-mac/index.html \
+                   disconnect-display-mac-without-unplugging/index.html \
+                   free-betterdisplay-alternative/index.html; do
+            test -s "dist/client/$f" || { echo "missing dist/client/$f"; exit 1; }
+          done
