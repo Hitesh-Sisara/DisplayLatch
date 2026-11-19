@@ -56,6 +56,7 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://uno.directory", img: "https://uno.directory/uno-directory.svg", alt: "Listed on Uno Directory", width: 106 },
   { href: "https://saascity.io", img: "https://saascity.io/badges/featured-light.svg", alt: "Featured on SaaSCity", width: 84 },
   { href: "https://thesaasdir.com/product/displaylatch?ref=badge", img: "https://thesaasdir.com/badge/displaylatch.svg", alt: "Featured on TheSaaSDir", width: 127 },
+  { href: "https://dailypings.com/p/displaylatch", img: "https://dailypings.com/badge-light.svg", alt: "Featured on DailyPings", width: 120 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
