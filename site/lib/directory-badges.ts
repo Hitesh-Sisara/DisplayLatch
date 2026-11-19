@@ -42,6 +42,8 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://deeplaunch.io", img: "https://deeplaunch.io/badge/badge_light.svg", alt: "Featured on DeepLaunch.io", width: 111 },
   { href: "https://www.scrolllaunch.com/products/displaylatch?ref=badge", img: "https://www.scrolllaunch.com/api/badge/displaylatch", alt: "Featured on ScrollLaunch", width: 147 },
   { href: "https://startupfa.st", img: "https://startupfa.st/images/badges/powered-by-light.svg", alt: "Powered by Startup Fast", width: 76 },
+  { href: "https://foundrlist.com/product/displaylatch?utm_source=badge&utm_medium=embed", img: "https://foundrlist.com/api/badge/displaylatch", alt: "Featured on FoundrList", width: 100 },
+  { href: "https://openhunts.com", img: "https://cdn.openhunts.com/badges/club.webp", alt: "OpenHunts Club Member", width: 120 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
