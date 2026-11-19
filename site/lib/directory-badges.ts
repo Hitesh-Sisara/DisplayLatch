@@ -25,6 +25,7 @@ export const BADGE_HEIGHT = 32;
 // One directory per line reads as a table.
 // prettier-ignore
 export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
+  { href: "https://macnative.io/apps/displaylatch?utm_source=macnative-badge&utm_medium=referral", img: "https://macnative.io/badge?kind=listed&theme=light&slug=displaylatch", alt: "Listed on MacNative", width: 120 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
