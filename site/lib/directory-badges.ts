@@ -104,6 +104,7 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://fastlaunch.io", img: "https://fastlaunch.io/images/badges/featured-light.svg", alt: "Featured on FastLaunch", width: 118 },
   { href: "https://findasaas.com/displaylatch", img: "https://findasaas.com/badge/displaylatch", alt: "Featured on findasaas", width: 96 },
   { href: "https://hiproducty.com", img: "https://hiproducty.com/badge.svg", alt: "Featured on Hiproducty", width: 120 },
+  { href: "https://huzzler.so/products/t3DYMLDqNp/displaylatch?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing", img: "https://huzzler.so/assets/images/embeddable-badges/featured-light.png", alt: "Huzzler Embed Badge", width: 92 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
