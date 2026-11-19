@@ -80,6 +80,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://lemonlaunch.dev/productivity/displaylatch", img: "https://lemonlaunch.dev/badge/lemonlaunch-badge-light.svg", alt: "Featured on LemonLaunch", width: 107 },
   { href: "https://theonestartup.com", img: "https://theonestartup.com/badages-awards.svg", alt: "Featured on The One Startup", width: 133 },
   { href: "https://www.verifiedtools.info/tools/displaylatch", img: "https://www.verifiedtools.info/badge.svg", alt: "DisplayLatch on Verified Tools — AI & SaaS tools directory", width: 119 },
+  { href: "https://publishyoursaas.com/listing/displaylatch-sisara-in", img: "https://publishyoursaas.com/publishyoursaas-badge.svg", alt: "DisplayLatch is listed on publishyoursaas", width: 128, data: { "data-publishyoursaas-badge": "displaylatch-sisara-in" } },
+  { href: "https://shipboost.io/tools/displaylatch", img: "https://shipboost.io/badge/cmwnytaw7000ctr0tfxmhw3gb?theme=light", alt: "Featured on ShipBoost", width: 139, data: { "data-shipboost-badge": "free-launch" } },
+  { href: "https://startupslab.site", img: "https://cdn.startupslab.site/site-images/logos/badges/badge-light.png", alt: "Launched on Startups Lab", width: 111 },
+  { href: "https://wayfindio.com", img: "https://wayfindio.com/badge/badge_light.svg", alt: "Featured on Wayfindio", width: 111 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
