@@ -48,6 +48,12 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://newtool.site/item/displaylatch?utm_source=displaylatch.sisara.in", img: "https://newtool.site/badges/newtool-light.svg", alt: "Featured on NewTool.site", width: 124 },
   { href: "https://www.tinystartups.com/startup/displaylatch", img: "https://www.tinystartups.com/api/badge/launching-soon/displaylatch", alt: "Launched on Tiny Startups", width: 130 },
   { href: "https://toolindex.net/?ref=badge", img: "https://toolindex.net/badges/listed-on-toolindex.svg", alt: "Listed on Tool Index", width: 119, rel: "nofollow noopener" },
+  { href: "https://firstlook.tools", img: "https://firstlook.tools/badge/badge_light.svg", alt: "Featured on First Look", width: 116 },
+  { href: "https://www.nxgntools.com/tools/displaylatch?utm_source=displaylatch", img: "https://www.nxgntools.com/api/embed/displaylatch?type=FEATURED_ON", alt: "Featured on NxGn Tools", width: 108 },
+  { href: "https://productwatch.io/products/displaylatch?utm_source=badge", img: "https://productwatch.io/backend/api/v1/badge/featured?productId=e2f1b664-0466-46a3-83f7-9e9594aa078e&darkMode=false", alt: "DisplayLatch", width: 154 },
+  { href: "https://tooldirs.com", img: "https://tooldirs.com/badge/badge_light.svg", alt: "Featured on ToolDirs", width: 101 },
+  { href: "https://ufind.best/products/displaylatch", img: "https://ufind.best/badges/ufind-best-badge-light.svg", alt: "Featured on ufind.best", width: 101 },
+  { href: "https://uno.directory", img: "https://uno.directory/uno-directory.svg", alt: "Listed on Uno Directory", width: 106 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
