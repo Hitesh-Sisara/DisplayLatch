@@ -27,6 +27,9 @@ export const BADGE_HEIGHT = 32;
 export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://macnative.io/apps/displaylatch?utm_source=macnative-badge&utm_medium=referral", img: "https://macnative.io/badge?kind=listed&theme=light&slug=displaylatch", alt: "Listed on MacNative", width: 120 },
   { href: "https://macbase.app/apps/displaylatch?ref=badge", img: "https://macbase.app/badge/featured-on-macbase.svg", alt: "DisplayLatch is featured on MacBase", width: 100 },
+  { href: "https://swipetolaunch.com/p/displaylatch?ref=badge", img: "https://swipetolaunch.com/api/badge/displaylatch?theme=light", alt: "Featured on SwipeToLaunch", width: 147 },
+  { href: "https://twelve.tools", img: "https://twelve.tools/badge0-light.svg", alt: "Featured on Twelve Tools", width: 119 },
+  { href: "https://www.uneed.best/tool/displaylatch", img: "https://www.uneed.best/EMBED3B.png", alt: "Launching Soon on Uneed", width: 123 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
