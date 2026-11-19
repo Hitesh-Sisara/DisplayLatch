@@ -134,13 +134,13 @@ export default function Home() {
             <a className="pill-new" href={SITE.releases}>
               <b>NEW</b> Version {SITE.version} is out, free for everyone
             </a>
-            <h1 className="display">
-              Brighter monitors. <span className="accent">Zero</span> black screens.
+            <h1 className="display hero-title">
+              Control external monitor <span className="accent">brightness</span> on your Mac.
             </h1>
             <p className="lede">
-              DisplayLatch is a free, open-source Mac menu-bar app that controls external monitor
-              brightness with real DDC backlight control, lets one slider dim every screen at once,
-              and brings back monitors that stay black after sleep.
+              DisplayLatch is a free menu-bar app for external monitors. Change each monitor's real
+              brightness over DDC, dim every screen at once with one slider, switch resolution, and
+              get monitors back automatically when they stay black after sleep.
             </p>
             <div className="btn-row">
               <a className="btn btn-dark" href={SITE.download} rel="noopener">
