@@ -44,6 +44,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://startupfa.st", img: "https://startupfa.st/images/badges/powered-by-light.svg", alt: "Powered by Startup Fast", width: 76 },
   { href: "https://foundrlist.com/product/displaylatch?utm_source=badge&utm_medium=embed", img: "https://foundrlist.com/api/badge/displaylatch", alt: "Featured on FoundrList", width: 100 },
   { href: "https://openhunts.com", img: "https://cdn.openhunts.com/badges/club.webp", alt: "OpenHunts Club Member", width: 120 },
+  { href: "https://launchpadly.co/startup/displaylatch?ref=badge", img: "https://launchpadly.co/embed/badges/startup/displaylatch.svg?variant=light", alt: "Launchpadly Startup Directory", width: 147, data: { "data-launchpadly-badge": "displaylatch", "data-launchpadly-badge-variant": "light" } },
+  { href: "https://newtool.site/item/displaylatch?utm_source=displaylatch.sisara.in", img: "https://newtool.site/badges/newtool-light.svg", alt: "Featured on NewTool.site", width: 124 },
+  { href: "https://www.tinystartups.com/startup/displaylatch", img: "https://www.tinystartups.com/api/badge/launching-soon/displaylatch", alt: "Launched on Tiny Startups", width: 130 },
+  { href: "https://toolindex.net/?ref=badge", img: "https://toolindex.net/badges/listed-on-toolindex.svg", alt: "Listed on Tool Index", width: 119, rel: "nofollow noopener" },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
