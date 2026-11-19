@@ -119,6 +119,9 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://navfolders.com", img: "https://navfolders.com/badge/nav_light.svg", alt: "NavFolders", width: 119 },
   { href: "https://nextlaunch.io/projects/displaylatch", img: "https://nextlaunch.io/images/badges/nextlaunch-badge-light.svg", alt: "Featured on Next Launch", width: 127 },
   { href: "https://www.pavelaunch.com/p/50bd6369-fc34-473e-bd2b-b27c4e02062f", img: "https://www.pavelaunch.com/api/embed?type=featured&theme=light", alt: "On PaveLaunch", width: 119 },
+  { href: "https://peerpush.com/p/displaylatch", img: "https://peerpush.com/p/displaylatch/badge.png", alt: "DisplayLatch on PeerPush", width: 113 },
+  { href: "https://productarena.net/b/displaylatch", img: "https://productarena.net/badge/displaylatch", alt: "DisplayLatch on ProductArena", width: 118 },
+  { href: "https://producthot.com", img: "https://producthot.com/badages-awards.svg", alt: "Featured on Product Hot", width: 109 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
