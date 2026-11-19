@@ -37,6 +37,8 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://smollaunch.com", img: "https://smollaunch.com/badges/featured.svg", alt: "DisplayLatch — Featured on Smol Launch", width: 134 },
   { href: "https://neeed.directory/products/displaylatch?utm_source=displaylatch", img: "https://neeed.directory/badges/neeed-badge-light.svg", alt: "Featured on neeed.directory", width: 101 },
   { href: "https://www.tinyshelf.co/?ref=displaylatch.sisara.in", img: "https://www.tinyshelf.co/badge/tinyshelf-badge-light-5ca4026a.svg", alt: "Featured on TinyShelf", width: 108 },
+  { href: "https://auraplusplus.com/projects/displaylatch", img: "https://auraplusplus.com/images/badges/featured-on-light.svg", alt: "Featured on Aura++", width: 109 },
+  { href: "https://tinylaunch.com", img: "https://tinylaunch.com/tinylaunch_badge_launching_soon.svg", alt: "TinyLaunch Badge", width: 105 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
