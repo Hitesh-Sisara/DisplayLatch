@@ -34,6 +34,7 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://nicklaunches.com/", img: "https://nicklaunches.com/badges/featured.png", alt: "Featured on Nick Launches", width: 137 },
   { href: "https://startupfa.me/s/displaylatch?utm_source=displaylatch.sisara.in", img: "https://startupfa.me/badge?t=classic&theme=light", alt: "DisplayLatch - Featured on Startup Fame", width: 120 },
   { href: "https://turbo0.com/item/displaylatch", img: "https://img.turbo0.com/badge-listed-light.svg", alt: "Listed on Turbo0", width: 96 },
+  { href: "https://smollaunch.com", img: "https://smollaunch.com/badges/featured.svg", alt: "DisplayLatch — Featured on Smol Launch", width: 134 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
