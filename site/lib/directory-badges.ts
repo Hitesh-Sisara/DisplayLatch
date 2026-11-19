@@ -114,6 +114,8 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://www.launchpact.io/startups?utm_source=badge&utm_medium=embed&utm_campaign=directory-badge", img: "https://www.launchpact.io/badge-listed.png", alt: "Listed on LaunchPact", width: 96 },
   { href: "https://launchsoar.com", img: "https://launchsoar.com/logo.png", alt: "Launch", width: 32, data: { "data-launch-badge": "true" } },
   { href: "https://listpitch.com", img: "https://listpitch.com/badge.svg", alt: "Listed on listpitch.com", width: 91 },
+  { href: "https://lift-off.sh/p/displaylatch", img: "https://lift-off.sh/images/badges/badgeLaunchedLight.webp", alt: "DisplayLatch on LiftOff Badge", width: 96 },
+  { href: "https://listmaro.com", img: "https://listmaro.com/badge.svg", alt: "Listed on Listmaro", width: 118 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
