@@ -39,6 +39,9 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://www.tinyshelf.co/?ref=displaylatch.sisara.in", img: "https://www.tinyshelf.co/badge/tinyshelf-badge-light-5ca4026a.svg", alt: "Featured on TinyShelf", width: 108 },
   { href: "https://auraplusplus.com/projects/displaylatch", img: "https://auraplusplus.com/images/badges/featured-on-light.svg", alt: "Featured on Aura++", width: 109 },
   { href: "https://tinylaunch.com", img: "https://tinylaunch.com/tinylaunch_badge_launching_soon.svg", alt: "TinyLaunch Badge", width: 105 },
+  { href: "https://deeplaunch.io", img: "https://deeplaunch.io/badge/badge_light.svg", alt: "Featured on DeepLaunch.io", width: 111 },
+  { href: "https://www.scrolllaunch.com/products/displaylatch?ref=badge", img: "https://www.scrolllaunch.com/api/badge/displaylatch", alt: "Featured on ScrollLaunch", width: 147 },
+  { href: "https://startupfa.st", img: "https://startupfa.st/images/badges/powered-by-light.svg", alt: "Powered by Startup Fast", width: 76 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
