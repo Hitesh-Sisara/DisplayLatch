@@ -84,6 +84,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://shipboost.io/tools/displaylatch", img: "https://shipboost.io/badge/cmwnytaw7000ctr0tfxmhw3gb?theme=light", alt: "Featured on ShipBoost", width: 139, data: { "data-shipboost-badge": "free-launch" } },
   { href: "https://startupslab.site", img: "https://cdn.startupslab.site/site-images/logos/badges/badge-light.png", alt: "Launched on Startups Lab", width: 111 },
   { href: "https://wayfindio.com", img: "https://wayfindio.com/badge/badge_light.svg", alt: "Featured on Wayfindio", width: 111 },
+  { href: "https://curlship.com", img: "https://curlship.com/badge.svg", alt: "Listed on CurlShip", width: 192 },
+  { href: "https://www.launchit.site/launches/displaylatch", img: "https://www.launchit.site/badges/launchit-light.svg", alt: "DisplayLatch - Featured on Launchit", width: 119 },
+  { href: "https://letslaunch.today/product/displaylatch", img: "https://letslaunch.today/badge/displaylatch.svg", alt: "DisplayLatch on LetsLaunch", width: 148 },
+  { href: "https://shipstry.com/", img: "https://shipstry.com/badges/featured.svg", alt: "Featured on Shipstry", width: 135 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
