@@ -98,10 +98,17 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://soproduct.com", img: "https://soproduct.com/badages-awards.svg", alt: "Featured on So Product", width: 109 },
   { href: "https://dealmyapp.com/listings/displaylatch", img: "https://dealmyapp.com/badges/listed-on-dealmyapp.svg", alt: "Listed on DealMyApp", width: 160 },
   { href: "https://debutpin.com", img: "https://debutpin.com/brand/badge-light.svg", alt: "DisplayLatch on DebutPin", width: 155 },
+  { href: "https://www.direct2app.com", img: "https://www.direct2app.com/featured-light.svg", alt: "Featured On Direct2App", width: 91 },
+  { href: "https://www.divvlaunches.com/product/displaylatch", img: "https://www.divvlaunches.com/badges/divvlaunches-featured-light.svg", alt: "Featured on DivvLaunches", width: 147 },
+  { href: "https://dofollow.tools", img: "https://dofollow.tools/badge/badge_light.svg", alt: "Featured on Dofollow.Tools", width: 111 },
+  { href: "https://fastlaunch.io", img: "https://fastlaunch.io/images/badges/featured-light.svg", alt: "Featured on FastLaunch", width: 118 },
+  { href: "https://findasaas.com/displaylatch", img: "https://findasaas.com/badge/displaylatch", alt: "Featured on findasaas", width: 96 },
+  { href: "https://hiproducty.com", img: "https://hiproducty.com/badge.svg", alt: "Featured on Hiproducty", width: 120 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
 export type DirectoryTextLink = { href: string; name: string; rel: string };
 
 export const DIRECTORY_TEXT_LINKS: readonly DirectoryTextLink[] = [
+  { href: "https://hotools.com/", name: "HoTools", rel: "noopener" },
 ];
