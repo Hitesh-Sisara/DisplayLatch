@@ -110,6 +110,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://junkstartups.com/api/go/displaylatch", img: "https://junkstartups.com/api/badge/displaylatch?theme=light", alt: "Featured on JunkStartups", width: 182 },
   { href: "https://kickproduct.com/products/displaylatch", img: "https://www.kickproduct.com/listedbadge.png", alt: "Listed on Kick Product", width: 120 },
   { href: "https://launchandloop.com/product/displaylatch", img: "https://launchandloop.com/api/badge/displaylatch?theme=light", alt: "DisplayLatch on Launch & Loop", width: 118 },
+  { href: "https://launchboosts.com/project/displaylatch?utm_source=badge&utm_medium=embed", img: "https://launchboosts.com/api/badge/displaylatch", alt: "DisplayLatch - Featured on LaunchBoosts", width: 148 },
+  { href: "https://www.launchpact.io/startups?utm_source=badge&utm_medium=embed&utm_campaign=directory-badge", img: "https://www.launchpact.io/badge-listed.png", alt: "Listed on LaunchPact", width: 96 },
+  { href: "https://launchsoar.com", img: "https://launchsoar.com/logo.png", alt: "Launch", width: 32, data: { "data-launch-badge": "true" } },
+  { href: "https://listpitch.com", img: "https://listpitch.com/badge.svg", alt: "Listed on listpitch.com", width: 91 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
@@ -117,4 +121,5 @@ export type DirectoryTextLink = { href: string; name: string; rel: string };
 
 export const DIRECTORY_TEXT_LINKS: readonly DirectoryTextLink[] = [
   { href: "https://hotools.com/", name: "HoTools", rel: "noopener" },
+  { href: "https://launchvoid.com", name: "LaunchVoid", rel: "noopener" },
 ];
