@@ -7,10 +7,12 @@
 <p align="center">
   <b>Keep external monitors connected on your Mac.</b><br>
   A free, open-source macOS menu-bar app. If an external monitor stays black or undetected after sleep, DisplayLatch brings it back. It also controls external monitor brightness over DDC and lets you disconnect a display without unplugging it.<br>
-  A lightweight, free alternative to BetterDisplay for these everyday tasks.
+  A lightweight, free alternative to BetterDisplay for these everyday tasks.<br>
+  <a href="https://displaylatch.sisara.in/"><b>displaylatch.sisara.in</b></a>
 </p>
 
 <p align="center">
+  <a href="https://displaylatch.sisara.in/"><img alt="Website: displaylatch.sisara.in" src="https://img.shields.io/badge/website-displaylatch.sisara.in-f22613"></a>
   <a href="https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest"><img alt="Download the latest release" src="https://img.shields.io/github/v/release/Hitesh-Sisara/DisplayLatch?label=download&color=5b4ce8"></a>
   <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-green"></a>
   <img alt="macOS 14 Sonoma or later" src="https://img.shields.io/badge/macOS-14%2B-black?logo=apple">
@@ -34,7 +36,7 @@ On top of that it covers the everyday display controls in one small native menu-
 
 - **Keep monitors connected.** It automatically reconnects external monitors that macOS leaves dark or off the desktop after sleep, wake, a restart or a replug, and restores your display arrangement.
 - **Disconnect a display without unplugging it.** It takes a monitor off the desktop with one switch, and switching it back on returns it to its old position. It's free (in BetterDisplay this is a paid Pro feature).
-- **External monitor brightness (DDC/CI).** It changes the monitor's real backlight, not a dimming overlay, on Apple silicon Macs.
+- **External monitor brightness (DDC/CI).** It changes the monitor's real backlight, not a dimming overlay, on Apple silicon Macs. See the [guide to controlling external monitor brightness on a Mac](https://displaylatch.sisara.in/control-external-monitor-brightness-mac/).
 - **One slider for every display.** Dim or brighten all your monitors together, or tune each one separately.
 - **Built-in display brightness** for the MacBook screen.
 - **Resolution switcher.** A slider and a menu with every mode macOS offers for each display, including HiDPI modes.
@@ -66,6 +68,10 @@ cd DisplayLatch
 ```
 
 You need Xcode 16 or later (Swift 6). Run `swift test` to run the unit tests.
+
+### Website
+
+The website at [displaylatch.sisara.in](https://displaylatch.sisara.in/) lives in [`site/`](site/). It's a [vinext](https://github.com/cloudflare/vinext) app exported as static files and hosted on Cloudflare Pages: `cd site && npm install && npm run build`, then `npm run deploy`.
 
 ## How "Keep monitors connected" works
 

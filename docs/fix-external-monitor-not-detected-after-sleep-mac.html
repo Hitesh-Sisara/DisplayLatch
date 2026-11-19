@@ -2,56 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mac External Monitor Black or Not Detected After Sleep: Fix</title>
-<meta name="description" content="Why a Mac&#x27;s external monitor stays black or undetected after sleep or restart, how to tell a cable problem from macOS, and how to fix it for good.">
-<link rel="canonical" href="https://hitesh-sisara.github.io/DisplayLatch/fix-external-monitor-not-detected-after-sleep-mac.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mac External Monitor Black or Not Detected After Sleep: Fix">
-<meta property="og:description" content="Why a Mac&#x27;s external monitor stays black or undetected after sleep or restart, how to tell a cable problem from macOS, and how to fix it for good.">
-<meta property="og:url" content="https://hitesh-sisara.github.io/DisplayLatch/fix-external-monitor-not-detected-after-sleep-mac.html">
-<meta property="og:image" content="https://hitesh-sisara.github.io/DisplayLatch/images/social-preview.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="images/icon-256.png">
-<link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "DisplayLatch", "operatingSystem": "macOS 14 or later (Apple silicon)", "applicationCategory": "UtilitiesApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "license": "https://opensource.org/licenses/MIT", "downloadUrl": "https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest", "url": "https://hitesh-sisara.github.io/DisplayLatch/", "codeRepository": "https://github.com/Hitesh-Sisara/DisplayLatch", "image": "https://hitesh-sisara.github.io/DisplayLatch/images/social-preview.png", "description": "Free, open-source macOS menu-bar app that keeps external monitors connected, fixes monitors that stay black after sleep, controls DDC brightness and disconnects displays without unplugging."}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does my Mac not detect my external monitor after sleep?", "acceptedAnswer": {"@type": "Answer", "text": "If System Information doesn't list the monitor, the cause is physical: the cable, adapter, input or power. If it is listed but stays black, macOS WindowServer has kept it off the desktop, for example as an independent output, and DisplayLatch can bring it back automatically."}}, {"@type": "Question", "name": "Why does my second monitor stay black but show as connected on my Mac?", "acceptedAnswer": {"@type": "Answer", "text": "macOS can keep a detected monitor off the desktop. The monitor gets power and is identified, but it receives no picture. The state is saved, so it can come back after every restart. Running 'displaylatch fix', or keeping DisplayLatch running, puts the monitor back on the desktop."}}, {"@type": "Question", "name": "Do I need to delete windowserver plist files to fix a missing monitor?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. WindowServer often writes the same stored state back. DisplayLatch fixes it through the macOS display configuration instead, without deleting files or restarting."}}]}</script>
+<title>DisplayLatch has moved</title>
+<link rel="canonical" href="https://displaylatch.sisara.in/fix-external-monitor-not-detected-after-sleep-mac/">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url=https://displaylatch.sisara.in/fix-external-monitor-not-detected-after-sleep-mac/">
+<script>location.replace("https://displaylatch.sisara.in/fix-external-monitor-not-detected-after-sleep-mac/" + location.hash);</script>
 </head>
 <body>
-<header class="top"><a class="brand" href="./"><img src="images/icon-256.png" alt="" width="28" height="28">DisplayLatch</a>
-<nav><a href="fix-external-monitor-not-detected-after-sleep-mac.html">Monitor black after sleep</a><a href="disconnect-display-mac-without-unplugging.html">Disconnect a display</a><a href="control-external-monitor-brightness-mac.html">External monitor brightness</a><a href="free-betterdisplay-alternative.html">BetterDisplay alternative</a><a class="gh" href="https://github.com/Hitesh-Sisara/DisplayLatch">GitHub</a></nav></header>
-<main>
-<article>
-<h1>External monitor black or not detected after sleep on Mac</h1>
-<p class="lead">You wake your Mac and one external monitor stays black, or it's missing from the desktop. Unplugging it may not help, and the problem can come back after every restart. This guide shows how to find out whether the cause is physical or macOS, and how to fix each case.</p>
-<h2>Step 1: is it the cable or macOS?</h2>
-<p>Open <b>System Information</b> (hold Option and choose Apple menu › System Information), then select <b>Graphics/Displays</b>.</p>
-<ul>
-<li><b>The monitor is not listed.</b> The Mac doesn't see it at all, so the cause is physical. Reseat the cable at both ends, try another cable or port, check the monitor's input source and power, and remove any dock or adapter to test.</li>
-<li><b>The monitor is listed but stays black</b>, or <code>displaylatch list</code> shows it as <code>OFFLINE</code>. The Mac detects the monitor, but macOS is keeping it off the desktop. Read on.</li>
-</ul>
-<h2>Step 2: why macOS keeps a detected monitor off the desktop</h2>
-<p>WindowServer, the part of macOS that manages screens, decides which detected monitors join the desktop. It can store a monitor as an <b>independent output</b> or leave it <b>disabled</b>. The monitor then gets power and macOS reads its details, but it never gets a picture. WindowServer saves this, so the monitor can stay dark after every reboot. Display utilities that "disconnect" monitors, and the macOS option to stop extending to a display, can leave a monitor in this state.</p>
-<h2>Step 3: fix it</h2>
-<h3>Quick things to try</h3>
-<ol>
-<li>Put the displays to sleep and wake them (Control-Shift-Power, or close and open the lid), then wait 10 seconds.</li>
-<li>Unplug <i>all</i> external monitors, wait 10 seconds, and connect them again one at a time.</li>
-<li>Open System Settings › Displays and check that the monitor isn't mirrored and is set to <b>Extended display</b>.</li>
-</ol>
-<p>If the monitor comes back but disappears again after the next sleep or restart, the stored state is the cause.</p>
-<h3>Fix it automatically with DisplayLatch</h3>
-<p>DisplayLatch is a free menu-bar app that checks for this after every display change, after wake and every 20 seconds. If it finds a monitor that is attached but off the desktop, it clears the independent-output flag, enables the display again and restores its position. To run the fix once from Terminal:</p>
-<pre><code>displaylatch fix</code></pre>
-<p>Any monitor you switched off on purpose in DisplayLatch stays off. It never wakes the built-in screen while the lid is closed.</p>
-<h2>Further reading</h2>
-<ul><li><a href="https://blog.cheverjohn.me/macos-26-stop-extending-blanked-my-monitor-fixing-windowserver-independentoutput">A detailed write-up of the WindowServer IndependentOutput problem</a></li>
-<li><a href="https://apple.stackexchange.com/questions/339671">Apple Stack Exchange: External display not recognized after waking from sleep</a></li></ul>
-</article><section><h2>Frequently asked questions</h2><h3>Why does my Mac not detect my external monitor after sleep?</h3><p>If System Information doesn&#x27;t list the monitor, the cause is physical: the cable, adapter, input or power. If it is listed but stays black, macOS WindowServer has kept it off the desktop, for example as an independent output, and DisplayLatch can bring it back automatically.</p><h3>Why does my second monitor stay black but show as connected on my Mac?</h3><p>macOS can keep a detected monitor off the desktop. The monitor gets power and is identified, but it receives no picture. The state is saved, so it can come back after every restart. Running &#x27;displaylatch fix&#x27;, or keeping DisplayLatch running, puts the monitor back on the desktop.</p><h3>Do I need to delete windowserver plist files to fix a missing monitor?</h3><p>Usually not. WindowServer often writes the same stored state back. DisplayLatch fixes it through the macOS display configuration instead, without deleting files or restarting.</p></section>
-<section class="cta"><h2>Get DisplayLatch, free</h2>
-<p>Native macOS menu-bar app, about 1.5 MB, open source (MIT). Apple silicon, macOS 14+.</p>
-<p><a class="button" href="https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest">Download the latest release</a> <a class="button ghost" href="https://github.com/Hitesh-Sisara/DisplayLatch">View source on GitHub</a></p></section>
-</main>
-<footer><p>DisplayLatch is free and open source under the MIT license. BetterDisplay is a trademark of its owner; DisplayLatch is an independent project, not affiliated with or endorsed by BetterDisplay, MonitorControl or Apple.</p></footer>
+<p>DisplayLatch has moved to <a href="https://displaylatch.sisara.in/fix-external-monitor-not-detected-after-sleep-mac/">https://displaylatch.sisara.in/fix-external-monitor-not-detected-after-sleep-mac/</a>.</p>
 </body>
 </html>

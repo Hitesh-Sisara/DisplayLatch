@@ -1,0 +1,28 @@
+{
+  "name": "displaylatch-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "verify": "node scripts/verify-output.mjs",
+    "deploy": "rm -rf dist/client/.vite dist/client/vinext-client-entry-manifest.json && wrangler pages deploy dist/client --project-name displaylatch --branch main --commit-dirty=true"
+  },
+  "dependencies": {
+    "@vitejs/plugin-rsc": "^0.5.39",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-server-dom-webpack": "^19.3.1",
+    "vinext": "^1.4.6",
+    "vite": "^8.3.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.165.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://hitesh-sisara.github.io/DisplayLatch/sitemap.xml
