@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BADGE_HEIGHT, DIRECTORY_BADGES, DIRECTORY_TEXT_LINKS } from "../lib/directory-badges";
 import { GUIDES, SITE } from "../lib/site";
 import { Apple, GitHub } from "./icons";
 
@@ -89,6 +90,31 @@ export function Footer() {
             </ul>
           </div>
         </div>
+        {(DIRECTORY_BADGES.length > 0 || DIRECTORY_TEXT_LINKS.length > 0) && (
+          <div className="featured-on">
+            <h2>Featured on</h2>
+            <div className="badge-row">
+              {DIRECTORY_BADGES.map((b) => (
+                <a key={b.href} href={b.href} target="_blank" rel={b.rel ?? "noopener"} {...(b.data ?? {})}>
+                  <img src={b.img} alt={b.alt} width={b.width} height={BADGE_HEIGHT} loading="lazy" decoding="async" />
+                </a>
+              ))}
+            </div>
+            {DIRECTORY_TEXT_LINKS.length > 0 && (
+              <p className="text-links">
+                Also listed on{" "}
+                {DIRECTORY_TEXT_LINKS.map((t, i) => (
+                  <span key={t.href}>
+                    {i > 0 && ", "}
+                    <a href={t.href} rel={t.rel}>
+                      {t.name}
+                    </a>
+                  </span>
+                ))}
+              </p>
+            )}
+          </div>
+        )}
         <div className="foot-bottom">
           <span>
             © 2026 <a href={SITE.author.url}>Hitesh Sisara</a>. DisplayLatch is free software under
