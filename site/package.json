@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
+    "prebuild": "node --experimental-strip-types --no-warnings scripts/sitemap.mts",
     "build": "vinext build",
-    "verify": "node scripts/verify-output.mjs",
     "deploy": "rm -rf dist/client/.vite dist/client/vinext-client-entry-manifest.json && wrangler pages deploy dist/client --project-name displaylatch --branch main --commit-dirty=true"
   },
   "dependencies": {

@@ -3,9 +3,10 @@ export const SITE = {
   url: "https://displaylatch.sisara.in",
   repo: "https://github.com/Hitesh-Sisara/DisplayLatch",
   releases: "https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest",
-  // GitHub serves the newest DMG at this stable URL once a release has an asset with this name.
-  download: "https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest",
+  // release.yml uploads an unversioned DisplayLatch.dmg to every release, so this always serves the newest build.
+  download: "https://github.com/Hitesh-Sisara/DisplayLatch/releases/latest/download/DisplayLatch.dmg",
   issues: "https://github.com/Hitesh-Sisara/DisplayLatch/issues",
+  // Fallback only: the build reads the real version from the latest GitHub release (lib/release.ts).
   version: "1.0.0",
   author: { name: "Hitesh Sisara", url: "https://sisara.in" },
   updated: "2026-11-19",
@@ -115,3 +116,16 @@ export const HOME_FAQ: QA[] = [
 ];
 
 export const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "DisplayLatch: external monitor brightness and auto-reconnect for Mac" }];
+
+/** One comparison table for the home page and the BetterDisplay page. Sources: each project's site and README, Nov 2026. */
+export const COMPARE: { feature: string; us: string; betterdisplay: string; monitorcontrol: string }[] = [
+  { feature: "Price", us: "Free", betterdisplay: "Free + paid Pro", monitorcontrol: "Free" },
+  { feature: "Open source", us: "Yes, MIT", betterdisplay: "No", monitorcontrol: "Yes, MIT" },
+  { feature: "External monitor brightness (DDC)", us: "Yes", betterdisplay: "Yes", monitorcontrol: "Yes" },
+  { feature: "Auto-reconnect monitors left dark after sleep", us: "Yes", betterdisplay: "Not advertised", monitorcontrol: "No" },
+  { feature: "Disconnect a display without unplugging", us: "Yes", betterdisplay: "Pro only", monitorcontrol: "No" },
+  { feature: "Resolution switcher", us: "Yes", betterdisplay: "Yes", monitorcontrol: "No" },
+  { feature: "Command-line tool", us: "Yes", betterdisplay: "Yes", monitorcontrol: "Not documented" },
+  { feature: "Brightness keys and native OSD", us: "No", betterdisplay: "Yes", monitorcontrol: "Yes" },
+  { feature: "HiDPI scaling, virtual screens, PIP, XDR", us: "No", betterdisplay: "Yes", monitorcontrol: "No" },
+];

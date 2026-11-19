@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GuidePage, guideMetadata } from "../../components/guide";
+import { COMPARE } from "../../lib/site";
 
 const SLUG = "free-betterdisplay-alternative";
 export const metadata = guideMetadata(SLUG);
@@ -17,18 +18,6 @@ const FAQ = [
     q: "Is DisplayLatch a MonitorControl alternative?",
     a: "For brightness, yes: both use DDC/CI to change the real backlight. MonitorControl adds brightness keys and the native on-screen display. DisplayLatch adds an All displays slider, auto-reconnect after sleep, disconnecting displays and resolution switching.",
   },
-];
-
-const ROWS: [string, string, string, string][] = [
-  ["Price", "Free", "Free + paid Pro", "Free"],
-  ["Source code", "Open (MIT)", "Closed", "Open (MIT)"],
-  ["External monitor brightness (DDC)", "Yes", "Yes", "Yes"],
-  ["Auto-reconnect monitors left dark after sleep", "Yes", "Not advertised", "No"],
-  ["Disconnect a display without unplugging", "Yes", "Pro", "No"],
-  ["Resolution switcher", "Yes", "Yes", "No"],
-  ["Command-line tool", "Yes", "Yes", "Not documented"],
-  ["Brightness keys and native OSD", "No", "Yes", "Yes"],
-  ["HiDPI scaling, virtual screens, PIP, XDR", "No", "Yes", "No"],
 ];
 
 export default function Page() {
@@ -54,14 +43,14 @@ export default function Page() {
           </tr>
         </thead>
         <tbody>
-          {ROWS.map(([a, b, c, d]) => (
-            <tr key={a}>
-              <td>{a}</td>
+          {COMPARE.map((r) => (
+            <tr key={r.feature}>
+              <td>{r.feature}</td>
               <td>
-                <b>{b}</b>
+                <b>{r.us}</b>
               </td>
-              <td>{c}</td>
-              <td>{d}</td>
+              <td>{r.betterdisplay}</td>
+              <td>{r.monitorcontrol}</td>
             </tr>
           ))}
         </tbody>
