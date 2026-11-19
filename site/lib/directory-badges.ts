@@ -92,6 +92,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://gets.tools", img: "https://gets.tools/badge/badge_light.svg", alt: "Featured on Gets.Tools", width: 91 },
   { href: "https://saascubes.com", img: "https://saascubes.com/images/badges/badge-light.png", alt: "Listed on SaaS Cubes", width: 104 },
   { href: "https://tooldisk.com", img: "https://tooldisk.com/badge/badge_light.svg", alt: "Featured on ToolDisk.com", width: 111 },
+  { href: "https://www.indietools.app/products/displaylatch", img: "https://www.indietools.app/badges/listed-on-indietools-light.png", alt: "Listed on IndieTools", width: 100 },
+  { href: "https://prolaunch.net", img: "https://prolaunch.net/images/badges/featured-light.svg", alt: "Pro Launch Featured Badge (light theme)", width: 111 },
+  { href: "https://saaspa.ge/product/cmwo5bllr002rl808bwu3ivgc", img: "https://saaspa.ge/api/embed/product/cmwo5bllr002rl808bwu3ivgc/badge.png?theme=orange", alt: "Featured on Saaspa.ge", width: 107, rel: "nofollow" },
+  { href: "https://soproduct.com", img: "https://soproduct.com/badages-awards.svg", alt: "Featured on So Product", width: 109 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
