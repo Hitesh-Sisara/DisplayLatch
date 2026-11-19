@@ -64,6 +64,12 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://launchpanda.dev/launches/productivity/displaylatch", img: "https://launchpanda.dev/images/badges/launchpanda-badge.svg", alt: "Launched on LaunchPanda", width: 130 },
   { href: "https://www.listbulb.com/tools/displaylatch", img: "https://www.listbulb.com/featured-on-listbulb-light.svg", alt: "Featured on ListBulb", width: 96 },
   { href: "https://saasgrow.app?ref=displaylatch.sisara.in", img: "https://saasgrow.app/api/badge?type=featured&style=light", alt: "DisplayLatch on SaaSGrow", width: 142 },
+  { href: "https://dododirectory.com", img: "https://dododirectory.com/badge-light.png", alt: "Featured on DodoDirectory", width: 118 },
+  { href: "https://easylaunch.dev/productivity/displaylatch", img: "https://easylaunch.dev/badge/easylaunch-badge-light.svg", alt: "Featured on EasyLaunch", width: 107 },
+  { href: "https://www.launchvault.dev", img: "https://www.launchvault.dev/images/badges/launch-valut-badge.svg", alt: "Feature On Launch Vault", width: 101 },
+  { href: "https://saasbison.com", img: "https://saasbison.com/badge.png", alt: "Featured on SaaSBison", width: 118 },
+  { href: "https://starterbest.com", img: "https://starterbest.com/badages-awards.svg", alt: "Featured on Starter Best", width: 109 },
+  { href: "https://startuptrusted.com?ref=displaylatch.sisara.in", img: "https://startuptrusted.com/api/badge?type=featured&style=light", alt: "DisplayLatch on StartupTrusted", width: 142 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
