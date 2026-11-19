@@ -30,6 +30,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://swipetolaunch.com/p/displaylatch?ref=badge", img: "https://swipetolaunch.com/api/badge/displaylatch?theme=light", alt: "Featured on SwipeToLaunch", width: 147 },
   { href: "https://twelve.tools", img: "https://twelve.tools/badge0-light.svg", alt: "Featured on Twelve Tools", width: 119 },
   { href: "https://www.uneed.best/tool/displaylatch", img: "https://www.uneed.best/EMBED3B.png", alt: "Launching Soon on Uneed", width: 123 },
+  { href: "https://findly.tools/displaylatch?utm_source=displaylatch", img: "https://findly.tools/badges/findly-tools-badge-light.svg", alt: "Featured on Findly.tools", width: 101 },
+  { href: "https://nicklaunches.com/", img: "https://nicklaunches.com/badges/featured.png", alt: "Featured on Nick Launches", width: 137 },
+  { href: "https://startupfa.me/s/displaylatch?utm_source=displaylatch.sisara.in", img: "https://startupfa.me/badge?t=classic&theme=light", alt: "DisplayLatch - Featured on Startup Fame", width: 120 },
+  { href: "https://turbo0.com/item/displaylatch", img: "https://img.turbo0.com/badge-listed-light.svg", alt: "Listed on Turbo0", width: 96 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
