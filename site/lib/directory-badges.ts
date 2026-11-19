@@ -70,6 +70,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://saasbison.com", img: "https://saasbison.com/badge.png", alt: "Featured on SaaSBison", width: 118 },
   { href: "https://starterbest.com", img: "https://starterbest.com/badages-awards.svg", alt: "Featured on Starter Best", width: 109 },
   { href: "https://startuptrusted.com?ref=displaylatch.sisara.in", img: "https://startuptrusted.com/api/badge?type=featured&style=light", alt: "DisplayLatch on StartupTrusted", width: 142 },
+  { href: "https://bestsky.tools?utm_source=badge", img: "https://assets.bestsky.tools/badges/featured-light.svg", alt: "Featured on BestskyTools", width: 99 },
+  { href: "https://daniellaunches.com", img: "https://daniellaunches.com/badge-light.svg", alt: "Featured on DanielLaunches", width: 145 },
+  { href: "https://launchit.fast", img: "https://launchit.fast/img/launching.svg", alt: "Featured on LaunchIt", width: 119 },
+  { href: "https://sumodir.com", img: "https://sumodir.com/badge.png", alt: "Featured on SumoDir", width: 118 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
