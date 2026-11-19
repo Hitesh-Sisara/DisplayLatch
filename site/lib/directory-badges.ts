@@ -74,6 +74,12 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://daniellaunches.com", img: "https://daniellaunches.com/badge-light.svg", alt: "Featured on DanielLaunches", width: 145 },
   { href: "https://launchit.fast", img: "https://launchit.fast/img/launching.svg", alt: "Featured on LaunchIt", width: 119 },
   { href: "https://sumodir.com", img: "https://sumodir.com/badge.png", alt: "Featured on SumoDir", width: 118 },
+  { href: "https://www.justsimple.tools", img: "https://www.justsimple.tools/badge.svg", alt: "Listed on JustSimple Tools", width: 121 },
+  { href: "https://launch-list.org/product/displaylatch", img: "https://launch-list.org/badges/svg/launch_list_badge_launching_soon.svg", alt: "Launch List Badge", width: 98 },
+  { href: "https://launchstreak.dev/productivity/displaylatch", img: "https://launchstreak.dev/badge/launch-streak-badge-light.svg", alt: "Launched on Launch Streak", width: 117 },
+  { href: "https://lemonlaunch.dev/productivity/displaylatch", img: "https://lemonlaunch.dev/badge/lemonlaunch-badge-light.svg", alt: "Featured on LemonLaunch", width: 107 },
+  { href: "https://theonestartup.com", img: "https://theonestartup.com/badages-awards.svg", alt: "Featured on The One Startup", width: 133 },
+  { href: "https://www.verifiedtools.info/tools/displaylatch", img: "https://www.verifiedtools.info/badge.svg", alt: "DisplayLatch on Verified Tools — AI & SaaS tools directory", width: 119 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
