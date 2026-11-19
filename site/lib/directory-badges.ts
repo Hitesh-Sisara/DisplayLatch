@@ -57,6 +57,13 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://saascity.io", img: "https://saascity.io/badges/featured-light.svg", alt: "Featured on SaaSCity", width: 84 },
   { href: "https://thesaasdir.com/product/displaylatch?ref=badge", img: "https://thesaasdir.com/badge/displaylatch.svg", alt: "Featured on TheSaaSDir", width: 127 },
   { href: "https://dailypings.com/p/displaylatch", img: "https://dailypings.com/badge-light.svg", alt: "Featured on DailyPings", width: 120 },
+  { href: "https://www.betterlaunch.co/product/displaylatch", img: "https://www.betterlaunch.co/badge-find-light.svg", alt: "betterlaunch.co", width: 114 },
+  { href: "https://buildlist.io/?ref=9b5bd330-6744-4ac4-910a-6909f2979322", img: "https://buildlist.io/badge.svg", alt: "Featured on Buildlist", width: 64 },
+  { href: "https://dayslaunch.com", img: "https://dayslaunch.com/badages-awards.svg", alt: "Featured on Days Launch", width: 109 },
+  { href: "https://easydofollow.dev/productivity/displaylatch", img: "https://easydofollow.dev/badge/easydofollow-badge-light.svg", alt: "Featured on EasyDoFollow", width: 107 },
+  { href: "https://launchpanda.dev/launches/productivity/displaylatch", img: "https://launchpanda.dev/images/badges/launchpanda-badge.svg", alt: "Launched on LaunchPanda", width: 130 },
+  { href: "https://www.listbulb.com/tools/displaylatch", img: "https://www.listbulb.com/featured-on-listbulb-light.svg", alt: "Featured on ListBulb", width: 96 },
+  { href: "https://saasgrow.app?ref=displaylatch.sisara.in", img: "https://saasgrow.app/api/badge?type=featured&style=light", alt: "DisplayLatch on SaaSGrow", width: 142 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
