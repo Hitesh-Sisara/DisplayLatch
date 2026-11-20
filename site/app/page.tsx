@@ -146,6 +146,16 @@ export default async function Home() {
               <span>Apple silicon, macOS 14+</span>
               <span>1.5 MB native app</span>
             </div>
+            {/* SwipeToLaunch's checker needs this exact href with rel="noopener" only. */}
+            <a className="hero-badge" href="https://swipetolaunch.com/p/displaylatch?ref=badge" target="_blank" rel="noopener">
+              <img
+                src="https://swipetolaunch.com/api/badge/displaylatch?theme=light"
+                alt="Featured on SwipeToLaunch"
+                width={183}
+                height={40}
+                decoding="async"
+              />
+            </a>
           </div>
           <HeroPopover />
         </div>
