@@ -103,7 +103,7 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://dofollow.tools", img: "https://dofollow.tools/badge/badge_light.svg", alt: "Featured on Dofollow.Tools", width: 111 },
   { href: "https://fastlaunch.io", img: "https://fastlaunch.io/images/badges/featured-light.svg", alt: "Featured on FastLaunch", width: 118 },
   { href: "https://findasaas.com/displaylatch", img: "https://findasaas.com/badge/displaylatch", alt: "Featured on findasaas", width: 96 },
-  { href: "https://hiproducty.com", img: "https://hiproducty.com/badge.svg", alt: "Featured on Hiproducty", width: 120 },
+  { href: "https://hiproducty.com", img: "https://www.hiproducty.com/badge/hiproducty-recommend-light.svg", alt: "Featured on Hiproducty", width: 120 },
   { href: "https://huzzler.so/products/t3DYMLDqNp/displaylatch?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing", img: "https://huzzler.so/assets/images/embeddable-badges/featured-light.png", alt: "Huzzler Embed Badge", width: 92 },
   { href: "https://indielaunch.site", img: "https://indielaunch.site/images/badges/listed-light.svg", alt: "Listed on Indie Launch", width: 124 },
   { href: "https://www.instantlaunch.xyz/displaylatch", img: "https://www.instantlaunch.xyz/badge-light.svg", alt: "Verified on InstantLaunch", width: 119 },
