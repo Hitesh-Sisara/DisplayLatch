@@ -128,6 +128,7 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://sameproduct.com", img: "https://sameproduct.com/badages-awards.svg", alt: "Featured on Same Product", width: 119 },
   { href: "https://shipycorn.com", img: "https://shipycorn.com/images/badges/shipycorn.badge.svg", alt: "Featured on Shipycorn", width: 127 },
   { href: "https://spotstartups.com", img: "https://spotstartups.com/assets/badges/spotstartups.com_badge_light.svg", alt: "Featured on Spot Startups - A Free Product Hunt Alternative", width: 121 },
+  { href: "https://www.sideprojectors.com/project/111992/displaylatch", img: "https://www.sideprojectors.com/img/badges/badge_show_white.png", alt: "Check out DisplayLatch at @SideProjectors", width: 80 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
@@ -136,4 +137,5 @@ export type DirectoryTextLink = { href: string; name: string; rel: string };
 export const DIRECTORY_TEXT_LINKS: readonly DirectoryTextLink[] = [
   { href: "https://hotools.com/", name: "HoTools", rel: "noopener" },
   { href: "https://launchvoid.com", name: "LaunchVoid", rel: "noopener" },
+  { href: "https://starthub.zip", name: "starthub.zip", rel: "noopener" },
 ];
