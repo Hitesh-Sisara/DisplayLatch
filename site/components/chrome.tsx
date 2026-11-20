@@ -33,6 +33,12 @@ export function Header() {
   );
 }
 
+// A directory's badge image sometimes fails (hotlink block, or no image until the
+// listing is approved). Swap it for a text pill with the badge's label instead of
+// showing a broken image. The script runs right after the markup, before any lazy
+// image has started loading, so an `error` listener catches every failure.
+const BROKEN_BADGE_SCRIPT = `(function(){function b(i){var p=i.parentElement;if(p&&p.hasAttribute("data-badge-label"))p.classList.add("badge-broken")}document.querySelectorAll(".badge-marquee img").forEach(function(i){i.addEventListener("error",function(){b(i)},{once:true})})})();`;
+
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -93,26 +99,48 @@ export function Footer() {
         {(DIRECTORY_BADGES.length > 0 || DIRECTORY_TEXT_LINKS.length > 0) && (
           <div className="featured-on">
             <h2>Featured on</h2>
-            <div className="badge-row">
-              {DIRECTORY_BADGES.map((b) => (
-                <a key={b.href} href={b.href} target="_blank" rel={b.rel ?? "noopener"} {...(b.data ?? {})}>
-                  <img src={b.img} alt={b.alt} width={b.width} height={BADGE_HEIGHT} loading="lazy" decoding="async" />
-                </a>
-              ))}
-            </div>
-            {DIRECTORY_TEXT_LINKS.length > 0 && (
-              <p className="text-links">
-                Also listed on{" "}
-                {DIRECTORY_TEXT_LINKS.map((t, i) => (
-                  <span key={t.href}>
-                    {i > 0 && ", "}
-                    <a href={t.href} rel={t.rel}>
+            {/* Every badge stays in the server-rendered HTML, because directories check
+                for their link. The second group only repeats the images so the strip
+                loops, so it carries no links and is hidden from screen readers. */}
+            <div className="badge-marquee">
+              <div
+                className="badge-track"
+                style={{ animationDuration: `${(DIRECTORY_BADGES.length + DIRECTORY_TEXT_LINKS.length) * 4}s` }}
+              >
+                <div className="badge-group">
+                  {DIRECTORY_BADGES.map((b) => (
+                    <a
+                      key={b.href}
+                      href={b.href}
+                      target="_blank"
+                      rel={b.rel ?? "noopener"}
+                      data-badge-label={b.alt}
+                      {...(b.data ?? {})}
+                    >
+                      <img src={b.img} alt={b.alt} width={b.width} height={BADGE_HEIGHT} loading="lazy" decoding="async" />
+                    </a>
+                  ))}
+                  {DIRECTORY_TEXT_LINKS.map((t) => (
+                    <a key={t.href} className="badge-text" href={t.href} target="_blank" rel={t.rel}>
                       {t.name}
                     </a>
-                  </span>
-                ))}
-              </p>
-            )}
+                  ))}
+                </div>
+                <div className="badge-group" aria-hidden="true">
+                  {DIRECTORY_BADGES.map((b) => (
+                    <span key={b.href} data-badge-label={b.alt}>
+                      <img src={b.img} alt="" width={b.width} height={BADGE_HEIGHT} loading="lazy" decoding="async" />
+                    </span>
+                  ))}
+                  {DIRECTORY_TEXT_LINKS.map((t) => (
+                    <span key={t.href} className="badge-text">
+                      {t.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <script dangerouslySetInnerHTML={{ __html: BROKEN_BADGE_SCRIPT }} />
           </div>
         )}
         <div className="foot-bottom">
