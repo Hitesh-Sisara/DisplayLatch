@@ -219,6 +219,15 @@ kbd {
 .center .fineprint {
   justify-content: center;
 }
+.hero-badge {
+  display: inline-flex;
+  margin-top: 22px;
+}
+.hero-badge img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
 .fineprint span::before {
   content: "";
   display: inline-block;
