@@ -129,6 +129,10 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://shipycorn.com", img: "https://shipycorn.com/images/badges/shipycorn.badge.svg", alt: "Featured on Shipycorn", width: 127 },
   { href: "https://spotstartups.com", img: "https://spotstartups.com/assets/badges/spotstartups.com_badge_light.svg", alt: "Featured on Spot Startups - A Free Product Hunt Alternative", width: 121 },
   { href: "https://www.sideprojectors.com/project/111992/displaylatch", img: "https://www.sideprojectors.com/img/badges/badge_show_white.png", alt: "Check out DisplayLatch at @SideProjectors", width: 80 },
+  { href: "https://startuptostartup.com", img: "https://startuptostartup.com/badages-awards.svg", alt: "Featured on Startup To Startup", width: 142 },
+  { href: "https://super-launch.app", img: "https://super-launch.app/badge/badge_light.svg", alt: "Featured on Super Launch", width: 111 },
+  { href: "https://thistools.app", img: "https://thistools.app/api/badges/powered-by-light.svg", alt: "Powered by thistools", width: 109 },
+  { href: "https://www.toollisted.com?utm_source=website&utm_medium=badge&utm_campaign=free_submission", img: "https://www.toollisted.com/badges/toollisted-badge-light.png", alt: "Featured on ToolListed", width: 101 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
