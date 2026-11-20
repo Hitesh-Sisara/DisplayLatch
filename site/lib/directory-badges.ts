@@ -133,6 +133,8 @@ export const DIRECTORY_BADGES: readonly DirectoryBadge[] = [
   { href: "https://super-launch.app", img: "https://super-launch.app/badge/badge_light.svg", alt: "Featured on Super Launch", width: 111 },
   { href: "https://thistools.app", img: "https://thistools.app/api/badges/powered-by-light.svg", alt: "Powered by thistools", width: 109 },
   { href: "https://www.toollisted.com?utm_source=website&utm_medium=badge&utm_campaign=free_submission", img: "https://www.toollisted.com/badges/toollisted-badge-light.png", alt: "Featured on ToolListed", width: 101 },
+  { href: "https://www.techtrendin.com/products/displaylatch", img: "https://www.techtrendin.com/badges/featured-light.png", alt: "Featured on TechTrendin'", width: 106 },
+  { href: "https://www.upplaunch.com/p/displaylatch", img: "https://www.upplaunch.com/api/badge/displaylatch.svg?theme=light", alt: "Featured on UppLaunch", width: 145 },
 ];
 
 // Directories that accept only a plain text link, not an image badge.
